@@ -1,0 +1,3 @@
+Provence Avenir BTP - version du 26/10/2026 10:47
+Contient : corrections orthographiques + lien Facebook + barre mobile 4 boutons.
+Repère de contrôle : le pied de page doit afficher 'Page Facebook'.
