@@ -152,7 +152,7 @@ section{position:relative}
   position:relative;display:block;border-radius:var(--radius);overflow:hidden;
   background:var(--ink);box-shadow:var(--shadow)
 }
-.card img{aspect-ratio:4/3;width:100%;object-fit:cover;transition:transform .5s ease;opacity:.92}
+.card img{aspect-ratio:4/3;width:100%;height:auto;display:block;object-fit:cover;transition:transform .5s ease;opacity:.92}
 .card:hover img{transform:scale(1.05)}
 .card-body{position:absolute;inset:auto 0 0 0;padding:26px 24px;background:linear-gradient(transparent,rgba(0,0,0,.78))}
 .card-body h3{color:#fff;margin:0;font-size:1.28rem}
@@ -162,7 +162,7 @@ section{position:relative}
 /* prestations détaillées */
 .services{display:grid;grid-template-columns:repeat(2,1fr);gap:34px}
 .service{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
-.service img{aspect-ratio:16/10;object-fit:cover;width:100%}
+.service img{aspect-ratio:16/10;object-fit:cover;width:100%;height:auto;display:block}
 .service-body{padding:30px 30px 34px}
 .service-body h3{margin-bottom:6px}
 .service-body .pitch{color:var(--brown);font-weight:500;font-size:.95rem;margin-bottom:12px}
@@ -215,7 +215,7 @@ section{position:relative}
 /* galerie projets */
 .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .gallery figure{margin:0;position:relative;overflow:hidden;border-radius:var(--radius);background:#eee}
-.gallery img{aspect-ratio:1/1;object-fit:cover;width:100%;transition:transform .5s}
+.gallery img{aspect-ratio:1/1;object-fit:cover;width:100%;height:auto;display:block;transition:transform .5s}
 .gallery figure:hover img{transform:scale(1.06)}
 .gallery figcaption{
   position:absolute;left:0;right:0;bottom:0;padding:14px 16px;font-size:.82rem;color:#fff;
@@ -343,3 +343,8 @@ section{position:relative}
 .breadcrumb a{color:inherit;text-decoration:none}
 .breadcrumb a:hover{text-decoration:underline}
 .breadcrumb li[aria-current]{opacity:.65}
+
+/* légendes visibles sans survol (mobile) */
+@media (hover:none){
+  .gallery figcaption{opacity:1;background:linear-gradient(transparent,rgba(0,0,0,.72))}
+}
